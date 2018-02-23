@@ -12,7 +12,7 @@ def test_divide(a , b, x):
     res = divide(a, b)
     assert  res == x
 
-def test_divide(a , b, x):
+#def test_divide(a , b, x):
 #    res = divide(a, b)
 #    assert  res == x
 
@@ -21,6 +21,6 @@ def test_multiply():
 
 def test_divide_array():
     a = np.array([1, 1, 1])
-    b = np.array([1, 1, 1])
+    b = np.array([2, 2, 2])
     x = divide(a, b)
     assert_allclose(x, np.array([0.5, 0.5, 0.5]))
