@@ -3,6 +3,7 @@ from computer import multiply
 import pytest
 import numpy as np
 from numpy.testing import assert_allclose
+#from numpy.testing import assert
 
 @pytest.mark.parametrize(
     'a,b,x',
@@ -10,7 +11,7 @@ from numpy.testing import assert_allclose
 )
 def test_divide(a , b, x):
     res = divide(a, b)
-    assert  res == x
+    assert  res == pytest.approx(x)
 
 #def test_divide(a , b, x):
 #    res = divide(a, b)
