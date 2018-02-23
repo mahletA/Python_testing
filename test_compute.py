@@ -1,6 +1,8 @@
 from computer import divide
 from computer import multiply
 import pytest
+import numpy as np
+from numpy.testing import assert_allclose
 
 @pytest.mark.parametrize(
     'a,b,x',
@@ -10,5 +12,15 @@ def test_divide(a , b, x):
     res = divide(a, b)
     assert  res == x
 
+def test_divide(a , b, x):
+#    res = divide(a, b)
+#    assert  res == x
+
 def test_multiply():
     assert multiply(2,2) == 4
+
+def test_divide_array():
+    a = np.array([1, 1, 1])
+    b = np.array([1, 1, 1])
+    x = divide(a, b)
+    assert_allclose(x, np.array([0.5, 0.5, 0.5]))
